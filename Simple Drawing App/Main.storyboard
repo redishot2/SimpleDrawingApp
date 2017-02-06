@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="mjP-Kv-ddo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="KWg-4x-ah4">
+            <objects>
+                <viewController id="mjP-Kv-ddo" customClass="ViewController" customModule="Simple_Drawing_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="mwE-2Q-Pej"/>
+                        <viewControllerLayoutGuide type="bottom" id="V3L-qj-NzA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="i90-Lx-Qfn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="large" translatesAutoresizingMaskIntoConstraints="NO" id="lcg-wM-ayt">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simple Drawing App" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="30" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VEI-cI-7Mk">
+                                <rect key="frame" x="0.0" y="20" width="375" height="333"/>
+                                <fontDescription key="fontDescription" name="PartyLetPlain" family="Party LET" pointSize="80"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E5h-Vz-EHZ">
+                                <rect key="frame" x="115" y="485" width="145" height="98"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.62911883503401356" green="0.6422725340136054" blue="0.65351296768707479" alpha="0.76515310402684567" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="PLAY">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pressedPlay:" destination="mjP-Kv-ddo" eventType="touchUpInside" id="xQY-dq-ESf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lcg-wM-ayt" firstAttribute="centerY" secondItem="i90-Lx-Qfn" secondAttribute="centerY" id="RlY-Lk-bY5"/>
+                            <constraint firstItem="VEI-cI-7Mk" firstAttribute="width" secondItem="i90-Lx-Qfn" secondAttribute="width" id="Uo8-0F-Zb5"/>
+                            <constraint firstItem="lcg-wM-ayt" firstAttribute="height" secondItem="i90-Lx-Qfn" secondAttribute="height" id="V5H-O0-fj4"/>
+                            <constraint firstItem="lcg-wM-ayt" firstAttribute="centerX" secondItem="i90-Lx-Qfn" secondAttribute="centerX" id="WUE-CM-ZQ0"/>
+                            <constraint firstItem="VEI-cI-7Mk" firstAttribute="centerX" secondItem="i90-Lx-Qfn" secondAttribute="centerX" id="WdU-qE-dZL"/>
+                            <constraint firstItem="lcg-wM-ayt" firstAttribute="width" secondItem="i90-Lx-Qfn" secondAttribute="width" id="cRj-Vy-0c4"/>
+                            <constraint firstItem="VEI-cI-7Mk" firstAttribute="top" secondItem="mwE-2Q-Pej" secondAttribute="bottom" id="kfH-1l-5sK"/>
+                            <constraint firstItem="VEI-cI-7Mk" firstAttribute="height" secondItem="i90-Lx-Qfn" secondAttribute="height" multiplier="0.5" id="oC2-3X-Wqk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="9UR-kG-D8J" kind="show" identifier="goToDraw" id="ctm-2u-dgm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="omv-qf-P4V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="184.80000000000001" y="22.938530734632685"/>
+        </scene>
+        <!--DrawVC-->
+        <scene sceneID="g22-4p-Zpd">
+            <objects>
+                <viewController id="9UR-kG-D8J" customClass="DrawVC" customModule="Simple_Drawing_App" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Yb1-QG-Iic"/>
+                        <viewControllerLayoutGuide type="bottom" id="qJd-Yc-5n2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n4V-tw-m15">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HD2-BX-gP8">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                <items>
+                                    <navigationItem id="pAq-GS-fSy">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="5Kk-IO-aa6">
+                                            <connections>
+                                                <action selector="cancelPressed:" destination="9UR-kG-D8J" id="Xnh-XX-vOT"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="Egi-EE-0l9">
+                                            <connections>
+                                                <action selector="savePressed:" destination="9UR-kG-D8J" id="pIu-0D-FWf"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="In4-Q3-M3D">
+                                <rect key="frame" x="0.0" y="118" width="375" height="549"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="549" id="c6u-7b-R1W"/>
+                                </constraints>
+                            </imageView>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rpI-Xd-CIH">
+                                <rect key="frame" x="0.0" y="52" width="375" height="66"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HD2-BX-gP8" firstAttribute="centerX" secondItem="n4V-tw-m15" secondAttribute="centerX" id="4V7-KV-Ga4"/>
+                            <constraint firstItem="rpI-Xd-CIH" firstAttribute="height" secondItem="n4V-tw-m15" secondAttribute="height" multiplier="0.1" id="JH9-R3-Q3i"/>
+                            <constraint firstItem="In4-Q3-M3D" firstAttribute="top" secondItem="rpI-Xd-CIH" secondAttribute="bottom" id="Nuw-3y-XBD"/>
+                            <constraint firstItem="rpI-Xd-CIH" firstAttribute="centerX" secondItem="n4V-tw-m15" secondAttribute="centerX" id="ORw-Kc-Y2t"/>
+                            <constraint firstItem="HD2-BX-gP8" firstAttribute="height" secondItem="n4V-tw-m15" secondAttribute="height" multiplier="0.065" id="VtC-PU-pCi"/>
+                            <constraint firstItem="HD2-BX-gP8" firstAttribute="width" secondItem="n4V-tw-m15" secondAttribute="width" id="dgR-T0-xPL"/>
+                            <constraint firstItem="rpI-Xd-CIH" firstAttribute="width" secondItem="n4V-tw-m15" secondAttribute="width" id="egu-Pl-3Xf"/>
+                            <constraint firstItem="qJd-Yc-5n2" firstAttribute="top" secondItem="In4-Q3-M3D" secondAttribute="bottom" id="g3F-Rf-A9U"/>
+                            <constraint firstItem="HD2-BX-gP8" firstAttribute="top" secondItem="Yb1-QG-Iic" secondAttribute="bottom" constant="-20" id="hKI-sb-tHB"/>
+                            <constraint firstItem="In4-Q3-M3D" firstAttribute="width" secondItem="n4V-tw-m15" secondAttribute="width" id="r2e-mj-Vtm"/>
+                            <constraint firstItem="In4-Q3-M3D" firstAttribute="centerX" secondItem="n4V-tw-m15" secondAttribute="centerX" id="rfb-H1-SzL"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="5Kk-IO-aa6" id="DZA-tE-8ho"/>
+                        <outlet property="colorPicker" destination="rpI-Xd-CIH" id="g3a-Tw-7eO"/>
+                        <outlet property="imageView" destination="In4-Q3-M3D" id="dcS-Vt-XGV"/>
+                        <segue destination="k43-ZU-Izz" kind="unwind" identifier="backToMainMenu" unwindAction="unwindToMainMenuWithSegue:" id="Gqt-9j-NRS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9JD-K8-Lvv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="k43-ZU-Izz" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="941.60000000000002" y="22.938530734632685"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="large" width="452" height="336"/>
+    </resources>
+</document>
